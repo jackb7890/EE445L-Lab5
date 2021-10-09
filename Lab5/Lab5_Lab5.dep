@@ -1,0 +1,48 @@
+Dependencies for Project 'Lab5', Target 'Lab5': (DO NOT MODIFY !)
+CompilerVersion: 6160000::V6.16::ARMCLANG
+F (.\startup.s)(0x615C9301)(--cpu Cortex-M4.fp.sp --pd "__EVAL SETA 1" -g --pd "__MICROLIB SETA 1"-I.\RTE\_Lab5-IC:\Users\jackt\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\jackt\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123--pd "__UVISION_VERSION SETA 535"--pd "_RTE_ SETA 1"--pd "TM4C123GH6PM SETA 1"--pd "_RTE_ SETA 1"--list .\startup.lst--xref -o .\startup.o--depend .\startup.d)
+F (..\inc\PLL.c)(0x6130DAFC)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -fsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I .. -I ../../..-I./RTE/_Lab5-IC:/Users/jackt/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/jackt/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="535" -D_RTE_ -DTM4C123GH6PM -D_RTE_ -Drvmdk -DPART_LM4F120H5QR-o ./pll.o -MD)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6035BEA0)
+I (..\inc\..\inc\PLL.h)(0x6130DAFC)
+I (..\inc\..\inc\tm4c123gh6pm.h)(0x6130DAFD)
+F (..\inc\Timer0A.c)(0x6130DAFD)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -fsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I .. -I ../../..-I./RTE/_Lab5-IC:/Users/jackt/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/jackt/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="535" -D_RTE_ -DTM4C123GH6PM -D_RTE_ -Drvmdk -DPART_LM4F120H5QR-o ./timer0a.o -MD)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6035BEA0)
+I (..\inc\..\inc\tm4c123gh6pm.h)(0x6130DAFD)
+I (..\inc\..\inc\CortexM.h)(0x6130DAFA)
+F (..\inc\LaunchPad.c)(0x6149EAAF)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -fsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I .. -I ../../..-I./RTE/_Lab5-IC:/Users/jackt/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/jackt/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="535" -D_RTE_ -DTM4C123GH6PM -D_RTE_ -Drvmdk -DPART_LM4F120H5QR-o ./launchpad.o -MD)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6035BEA0)
+I (..\inc\..\inc\LaunchPad.h)(0x6130DAFC)
+I (..\inc\..\inc\tm4c123gh6pm.h)(0x6130DAFD)
+I (..\inc\..\inc\CortexM.h)(0x6130DAFA)
+F (.\lab5Main.c)(0x6160C4AA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -fsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I .. -I ../../..-I./RTE/_Lab5-IC:/Users/jackt/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/jackt/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="535" -D_RTE_ -DTM4C123GH6PM -D_RTE_ -Drvmdk -DPART_LM4F120H5QR-o ./lab5main.o -MD)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6035BEA0)
+I (..\inc\tm4c123gh6pm.h)(0x6130DAFD)
+I (..\inc\CortexM.h)(0x6130DAFA)
+I (..\inc\Timer0A.h)(0x6130DAFD)
+I (..\inc\Timer1A.h)(0x6130DAFD)
+I (..\inc\Timer2A.h)(0x6130DAFD)
+I (..\inc\MAX5353.h)(0x615B8903)
+I (..\inc\LaunchPad.h)(0x6130DAFC)
+I (Switch.h)(0x615C9CEC)
+I (Song.h)(0x6160BAE5)
+I (..\inc\PLL.h)(0x6130DAFC)
+F (.\Switch.c)(0x615C9D2F)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -fsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I .. -I ../../..-I./RTE/_Lab5-IC:/Users/jackt/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/jackt/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="535" -D_RTE_ -DTM4C123GH6PM -D_RTE_ -Drvmdk -DPART_LM4F120H5QR-o ./switch.o -MD)
+I (Switch.h)(0x615C9CEC)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6035BEA0)
+I (..\inc\tm4c123gh6pm.h)(0x6130DAFD)
+I (..\inc\CortexM.h)(0x6130DAFA)
+I (..\inc\Timer0A.h)(0x6130DAFD)
+I (..\inc\Timer1A.h)(0x6130DAFD)
+I (Song.h)(0x6160BAE5)
+F (.\Song.c)(0x615C9301)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -fsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I .. -I ../../..-I./RTE/_Lab5-IC:/Users/jackt/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/jackt/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="535" -D_RTE_ -DTM4C123GH6PM -D_RTE_ -Drvmdk -DPART_LM4F120H5QR-o ./song.o -MD)
+I (Song.h)(0x6160BAE5)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6035BEA0)
+F (..\inc\MAX5353.c)(0x615C9331)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -fsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I .. -I ../../..-I./RTE/_Lab5-IC:/Users/jackt/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/jackt/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="535" -D_RTE_ -DTM4C123GH6PM -D_RTE_ -Drvmdk -DPART_LM4F120H5QR-o ./max5353.o -MD)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6035BEA0)
+I (..\inc\..\inc\tm4c123gh6pm.h)(0x6130DAFD)
+F (..\inc\Timer1A.c)(0x615C77EB)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -fsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I .. -I ../../..-I./RTE/_Lab5-IC:/Users/jackt/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/jackt/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="535" -D_RTE_ -DTM4C123GH6PM -D_RTE_ -Drvmdk -DPART_LM4F120H5QR-o ./timer1a.o -MD)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6035BEA0)
+I (..\inc\..\inc\tm4c123gh6pm.h)(0x6130DAFD)
+F (..\inc\Timer2A.c)(0x6130DAFD)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -fsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I .. -I ../../..-I./RTE/_Lab5-IC:/Users/jackt/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/jackt/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="535" -D_RTE_ -DTM4C123GH6PM -D_RTE_ -Drvmdk -DPART_LM4F120H5QR-o ./timer2a.o -MD)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6035BEA0)
+I (..\inc\..\inc\tm4c123gh6pm.h)(0x6130DAFD)

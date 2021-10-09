@@ -1,0 +1,587 @@
+Component: ARM Compiler 6.16 Tool: armlink [5dfeaa00]
+
+==============================================================================
+
+Section Cross References
+
+    startup.o(RESET) refers to startup.o(STACK) for StackMem
+    startup.o(RESET) refers to lab5main.o(.text.GPIOPortA_Handler) for GPIOPortA_Handler
+    startup.o(RESET) refers to timer0a.o(.text.Timer0A_Handler) for Timer0A_Handler
+    startup.o(RESET) refers to timer1a.o(.text.Timer1A_Handler) for Timer1A_Handler
+    startup.o(RESET) refers to timer2a.o(.text.Timer2A_Handler) for Timer2A_Handler
+    startup.o(RESET) refers to lab5main.o(.text.GPIOPortF_Handler) for GPIOPortF_Handler
+    startup.o(RESET) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    pll.o(.ARM.exidx.text.PLL_Init) refers to pll.o(.text.PLL_Init) for [Anonymous Symbol]
+    timer0a.o(.text.Timer0A_Init) refers to timer0a.o(.bss.PeriodicTask0) for PeriodicTask0
+    timer0a.o(.ARM.exidx.text.Timer0A_Init) refers to timer0a.o(.text.Timer0A_Init) for [Anonymous Symbol]
+    timer0a.o(.text.Timer0A_Handler) refers to timer0a.o(.bss.PeriodicTask0) for PeriodicTask0
+    timer0a.o(.ARM.exidx.text.Timer0A_Handler) refers to timer0a.o(.text.Timer0A_Handler) for [Anonymous Symbol]
+    timer0a.o(.ARM.exidx.text.Timer0A_Stop) refers to timer0a.o(.text.Timer0A_Stop) for [Anonymous Symbol]
+    launchpad.o(.ARM.exidx.text.LaunchPad_Init) refers to launchpad.o(.text.LaunchPad_Init) for [Anonymous Symbol]
+    launchpad.o(.ARM.exidx.text.LaunchPad_Input) refers to launchpad.o(.text.LaunchPad_Input) for [Anonymous Symbol]
+    launchpad.o(.text.LaunchPad_WaitForTouch) refers to launchpad.o(.text.DelayMs) for DelayMs
+    launchpad.o(.ARM.exidx.text.LaunchPad_WaitForTouch) refers to launchpad.o(.text.LaunchPad_WaitForTouch) for [Anonymous Symbol]
+    launchpad.o(.ARM.exidx.text.DelayMs) refers to launchpad.o(.text.DelayMs) for [Anonymous Symbol]
+    launchpad.o(.text.LaunchPad_WaitForRelease) refers to launchpad.o(.text.DelayMs) for DelayMs
+    launchpad.o(.ARM.exidx.text.LaunchPad_WaitForRelease) refers to launchpad.o(.text.LaunchPad_WaitForRelease) for [Anonymous Symbol]
+    launchpad.o(.ARM.exidx.text.LaunchPad_Output) refers to launchpad.o(.text.LaunchPad_Output) for [Anonymous Symbol]
+    lab5main.o(.ARM.exidx.text.portAInit) refers to lab5main.o(.text.portAInit) for [Anonymous Symbol]
+    lab5main.o(.ARM.exidx.text.timer0ATask) refers to lab5main.o(.text.timer0ATask) for [Anonymous Symbol]
+    lab5main.o(.text.timer1ATask) refers to lab5main.o(.bss.pausedFlag) for pausedFlag
+    lab5main.o(.text.timer1ATask) refers to lab5main.o(.data.finishedNoteFlag) for finishedNoteFlag
+    lab5main.o(.text.timer1ATask) refers to lab5main.o(.bss.sineIdx) for sineIdx
+    lab5main.o(.text.timer1ATask) refers to lab5main.o(.data.sineTable) for sineTable
+    lab5main.o(.text.timer1ATask) refers to max5353.o(.text.DAC_Out) for DAC_Out
+    lab5main.o(.ARM.exidx.text.timer1ATask) refers to lab5main.o(.text.timer1ATask) for [Anonymous Symbol]
+    lab5main.o(.text.GPIOPortF_Handler) refers to lab5main.o(.bss.song) for song
+    lab5main.o(.text.GPIOPortF_Handler) refers to switch.o(.text.rewind) for rewind
+    lab5main.o(.text.GPIOPortF_Handler) refers to lab5main.o(.bss.pausedFlag) for pausedFlag
+    lab5main.o(.text.GPIOPortF_Handler) refers to switch.o(.text.playPause) for playPause
+    lab5main.o(.text.GPIOPortF_Handler) refers to lab5main.o(.bss.debounceFlag) for debounceFlag
+    lab5main.o(.ARM.exidx.text.GPIOPortF_Handler) refers to lab5main.o(.text.GPIOPortF_Handler) for [Anonymous Symbol]
+    lab5main.o(.text.GPIOPortA_Handler) refers to lab5main.o(.bss.song) for song
+    lab5main.o(.text.GPIOPortA_Handler) refers to lab5main.o(.data.tempos) for tempos
+    lab5main.o(.text.GPIOPortA_Handler) refers to switch.o(.text.cycleTempo) for cycleTempo
+    lab5main.o(.text.GPIOPortA_Handler) refers to lab5main.o(.bss.debounceFlag) for debounceFlag
+    lab5main.o(.ARM.exidx.text.GPIOPortA_Handler) refers to lab5main.o(.text.GPIOPortA_Handler) for [Anonymous Symbol]
+    lab5main.o(.text.timer2ATask) refers to lab5main.o(.bss.debounceFlag) for debounceFlag
+    lab5main.o(.ARM.exidx.text.timer2ATask) refers to lab5main.o(.text.timer2ATask) for [Anonymous Symbol]
+    lab5main.o(.text.main) refers to startup.o(.text) for DisableInterrupts
+    lab5main.o(.text.main) refers to pll.o(.text.PLL_Init) for PLL_Init
+    lab5main.o(.text.main) refers to lab5main.o(.rodata..L__const.main.freqs) for .L__const.main.freqs
+    lab5main.o(.text.main) refers to memcpya.o(.text) for __aeabi_memcpy4
+    lab5main.o(.text.main) refers to lab5main.o(.rodata..L__const.main.durations) for .L__const.main.durations
+    lab5main.o(.text.main) refers to lab5main.o(.bss.song) for song
+    lab5main.o(.text.main) refers to song.o(.text.song_init) for song_init
+    lab5main.o(.text.main) refers to lab5main.o(.bss.sineIdx) for sineIdx
+    lab5main.o(.text.main) refers to lab5main.o(.data.sineTable) for sineTable
+    lab5main.o(.text.main) refers to max5353.o(.text.DAC_Init) for DAC_Init
+    lab5main.o(.text.main) refers to launchpad.o(.text.LaunchPad_Init) for LaunchPad_Init
+    lab5main.o(.text.main) refers to lab5main.o(.text.timer0ATask) for timer0ATask
+    lab5main.o(.text.main) refers to timer0a.o(.text.Timer0A_Init) for Timer0A_Init
+    lab5main.o(.text.main) refers to lab5main.o(.text.timer1ATask) for timer1ATask
+    lab5main.o(.text.main) refers to timer1a.o(.text.Timer1A_Init) for Timer1A_Init
+    lab5main.o(.text.main) refers to lab5main.o(.text.portAInit) for portAInit
+    lab5main.o(.ARM.exidx.text.main) refers to lab5main.o(.text.main) for [Anonymous Symbol]
+    switch.o(.text.rewind) refers to startup.o(.text) for DisableInterrupts
+    switch.o(.ARM.exidx.text.rewind) refers to switch.o(.text.rewind) for [Anonymous Symbol]
+    switch.o(.ARM.exidx.text.playPause) refers to switch.o(.text.playPause) for [Anonymous Symbol]
+    switch.o(.ARM.exidx.text.cycleTempo) refers to switch.o(.text.cycleTempo) for [Anonymous Symbol]
+    song.o(.ARM.exidx.text.song_init) refers to song.o(.text.song_init) for [Anonymous Symbol]
+    max5353.o(.ARM.exidx.text.DAC_Init) refers to max5353.o(.text.DAC_Init) for [Anonymous Symbol]
+    max5353.o(.ARM.exidx.text.DAC_Out) refers to max5353.o(.text.DAC_Out) for [Anonymous Symbol]
+    max5353.o(.ARM.exidx.text.DAC_Out2) refers to max5353.o(.text.DAC_Out2) for [Anonymous Symbol]
+    max5353.o(.ARM.exidx.text.DAC_InitRaw) refers to max5353.o(.text.DAC_InitRaw) for [Anonymous Symbol]
+    max5353.o(.ARM.exidx.text.DAC_OutRaw) refers to max5353.o(.text.DAC_OutRaw) for [Anonymous Symbol]
+    timer1a.o(.text.Timer1A_Init) refers to timer1a.o(.bss.PeriodicTask1) for PeriodicTask1
+    timer1a.o(.ARM.exidx.text.Timer1A_Init) refers to timer1a.o(.text.Timer1A_Init) for [Anonymous Symbol]
+    timer1a.o(.text.Timer1A_Handler) refers to timer1a.o(.bss.PeriodicTask1) for PeriodicTask1
+    timer1a.o(.ARM.exidx.text.Timer1A_Handler) refers to timer1a.o(.text.Timer1A_Handler) for [Anonymous Symbol]
+    timer1a.o(.ARM.exidx.text.Timer1A_Stop) refers to timer1a.o(.text.Timer1A_Stop) for [Anonymous Symbol]
+    timer2a.o(.text.Timer2A_Init) refers to timer2a.o(.bss.PeriodicTask2) for PeriodicTask2
+    timer2a.o(.ARM.exidx.text.Timer2A_Init) refers to timer2a.o(.text.Timer2A_Init) for [Anonymous Symbol]
+    timer2a.o(.text.Timer2A_Handler) refers to timer2a.o(.bss.PeriodicTask2) for PeriodicTask2
+    timer2a.o(.ARM.exidx.text.Timer2A_Handler) refers to timer2a.o(.text.Timer2A_Handler) for [Anonymous Symbol]
+    timer2a.o(.ARM.exidx.text.Timer2A_Stop) refers to timer2a.o(.text.Timer2A_Stop) for [Anonymous Symbol]
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000D) for __rt_final_cpp
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$0000000F) for __rt_final_exit
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry8b.o(.ARM.Collect$$$$0000000A) for _main_cpp_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry9a.o(.ARM.Collect$$$$0000000B) for _main_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry5.o(.ARM.Collect$$$$00000004) for _main_scatterload
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry2.o(.ARM.Collect$$$$00000001) for _main_stk
+    entry2.o(.ARM.Collect$$$$00000001) refers to entry2.o(.ARM.Collect$$$$00002712) for __lit__00000000
+    entry2.o(.ARM.Collect$$$$00002712) refers to startup.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to startup.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
+    entry9a.o(.ARM.Collect$$$$0000000B) refers to lab5main.o(.text.main) for main
+    entry9b.o(.ARM.Collect$$$$0000000C) refers to lab5main.o(.text.main) for main
+    init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing startup.o(HEAP), (0 bytes).
+    Removing pll.o(.text), (0 bytes).
+    Removing pll.o(.ARM.exidx.text.PLL_Init), (8 bytes).
+    Removing timer0a.o(.text), (0 bytes).
+    Removing timer0a.o(.ARM.exidx.text.Timer0A_Init), (8 bytes).
+    Removing timer0a.o(.ARM.exidx.text.Timer0A_Handler), (8 bytes).
+    Removing timer0a.o(.text.Timer0A_Stop), (26 bytes).
+    Removing timer0a.o(.ARM.exidx.text.Timer0A_Stop), (8 bytes).
+    Removing launchpad.o(.text), (0 bytes).
+    Removing launchpad.o(.ARM.exidx.text.LaunchPad_Init), (8 bytes).
+    Removing launchpad.o(.text.LaunchPad_Input), (28 bytes).
+    Removing launchpad.o(.ARM.exidx.text.LaunchPad_Input), (8 bytes).
+    Removing launchpad.o(.text.LaunchPad_WaitForTouch), (32 bytes).
+    Removing launchpad.o(.ARM.exidx.text.LaunchPad_WaitForTouch), (8 bytes).
+    Removing launchpad.o(.text.DelayMs), (38 bytes).
+    Removing launchpad.o(.ARM.exidx.text.DelayMs), (8 bytes).
+    Removing launchpad.o(.text.LaunchPad_WaitForRelease), (46 bytes).
+    Removing launchpad.o(.ARM.exidx.text.LaunchPad_WaitForRelease), (8 bytes).
+    Removing launchpad.o(.text.LaunchPad_Output), (14 bytes).
+    Removing launchpad.o(.ARM.exidx.text.LaunchPad_Output), (8 bytes).
+    Removing lab5main.o(.text), (0 bytes).
+    Removing lab5main.o(.ARM.exidx.text.portAInit), (8 bytes).
+    Removing lab5main.o(.ARM.exidx.text.timer0ATask), (8 bytes).
+    Removing lab5main.o(.ARM.exidx.text.timer1ATask), (8 bytes).
+    Removing lab5main.o(.ARM.exidx.text.GPIOPortF_Handler), (8 bytes).
+    Removing lab5main.o(.ARM.exidx.text.GPIOPortA_Handler), (8 bytes).
+    Removing lab5main.o(.text.timer2ATask), (18 bytes).
+    Removing lab5main.o(.ARM.exidx.text.timer2ATask), (8 bytes).
+    Removing lab5main.o(.ARM.exidx.text.main), (8 bytes).
+    Removing lab5main.o(.ARM.use_no_argv), (4 bytes).
+    Removing switch.o(.text), (0 bytes).
+    Removing switch.o(.ARM.exidx.text.rewind), (8 bytes).
+    Removing switch.o(.ARM.exidx.text.playPause), (8 bytes).
+    Removing switch.o(.ARM.exidx.text.cycleTempo), (8 bytes).
+    Removing song.o(.text), (0 bytes).
+    Removing song.o(.ARM.exidx.text.song_init), (8 bytes).
+    Removing max5353.o(.text), (0 bytes).
+    Removing max5353.o(.ARM.exidx.text.DAC_Init), (8 bytes).
+    Removing max5353.o(.ARM.exidx.text.DAC_Out), (8 bytes).
+    Removing max5353.o(.text.DAC_Out2), (28 bytes).
+    Removing max5353.o(.ARM.exidx.text.DAC_Out2), (8 bytes).
+    Removing max5353.o(.text.DAC_InitRaw), (140 bytes).
+    Removing max5353.o(.ARM.exidx.text.DAC_InitRaw), (8 bytes).
+    Removing max5353.o(.text.DAC_OutRaw), (42 bytes).
+    Removing max5353.o(.ARM.exidx.text.DAC_OutRaw), (8 bytes).
+    Removing timer1a.o(.text), (0 bytes).
+    Removing timer1a.o(.ARM.exidx.text.Timer1A_Init), (8 bytes).
+    Removing timer1a.o(.ARM.exidx.text.Timer1A_Handler), (8 bytes).
+    Removing timer1a.o(.text.Timer1A_Stop), (28 bytes).
+    Removing timer1a.o(.ARM.exidx.text.Timer1A_Stop), (8 bytes).
+    Removing timer2a.o(.text), (0 bytes).
+    Removing timer2a.o(.text.Timer2A_Init), (116 bytes).
+    Removing timer2a.o(.ARM.exidx.text.Timer2A_Init), (8 bytes).
+    Removing timer2a.o(.ARM.exidx.text.Timer2A_Handler), (8 bytes).
+    Removing timer2a.o(.text.Timer2A_Stop), (28 bytes).
+    Removing timer2a.o(.ARM.exidx.text.Timer2A_Stop), (8 bytes).
+
+56 unused section(s) (total 844 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpya.o ABSOLUTE
+    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpyb.o ABSOLUTE
+    LaunchPad.c                              0x00000000   Number         0  launchpad.o ABSOLUTE
+    MAX5353.c                                0x00000000   Number         0  max5353.o ABSOLUTE
+    PLL.c                                    0x00000000   Number         0  pll.o ABSOLUTE
+    Song.c                                   0x00000000   Number         0  song.o ABSOLUTE
+    Switch.c                                 0x00000000   Number         0  switch.o ABSOLUTE
+    Timer0A.c                                0x00000000   Number         0  timer0a.o ABSOLUTE
+    Timer1A.c                                0x00000000   Number         0  timer1a.o ABSOLUTE
+    Timer2A.c                                0x00000000   Number         0  timer2a.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    handlers.s                               0x00000000   Number         0  handlers.o ABSOLUTE
+    init.s                                   0x00000000   Number         0  init.o ABSOLUTE
+    lab5Main.c                               0x00000000   Number         0  lab5main.o ABSOLUTE
+    startup.s                                0x00000000   Number         0  startup.o ABSOLUTE
+    RESET                                    0x00000000   Section      644  startup.o(RESET)
+    $v0                                      0x0000026c   Number         0  startup.o(RESET)
+    .ARM.Collect$$$$00000000                 0x00000284   Section        0  entry.o(.ARM.Collect$$$$00000000)
+    .ARM.Collect$$$$00000001                 0x00000284   Section        4  entry2.o(.ARM.Collect$$$$00000001)
+    .ARM.Collect$$$$00000004                 0x00000288   Section        4  entry5.o(.ARM.Collect$$$$00000004)
+    .ARM.Collect$$$$00000008                 0x0000028c   Section        0  entry7b.o(.ARM.Collect$$$$00000008)
+    .ARM.Collect$$$$0000000A                 0x0000028c   Section        0  entry8b.o(.ARM.Collect$$$$0000000A)
+    .ARM.Collect$$$$0000000B                 0x0000028c   Section        8  entry9a.o(.ARM.Collect$$$$0000000B)
+    __lit__00000000                          0x00000294   Data           4  entry2.o(.ARM.Collect$$$$00002712)
+    .ARM.Collect$$$$0000000D                 0x00000294   Section        0  entry10a.o(.ARM.Collect$$$$0000000D)
+    .ARM.Collect$$$$0000000F                 0x00000294   Section        0  entry11a.o(.ARM.Collect$$$$0000000F)
+    .ARM.Collect$$$$00002712                 0x00000294   Section        4  entry2.o(.ARM.Collect$$$$00002712)
+    $v0                                      0x00000298   Number         0  startup.o(.text)
+    .text                                    0x00000298   Section       28  startup.o(.text)
+    .text                                    0x000002b4   Section        0  memcpya.o(.text)
+    .text                                    0x000002d8   Section       36  init.o(.text)
+    [Anonymous Symbol]                       0x000002fc   Section        0  max5353.o(.text.DAC_Init)
+    [Anonymous Symbol]                       0x00000390   Section        0  max5353.o(.text.DAC_Out)
+    [Anonymous Symbol]                       0x000003a4   Section        0  lab5main.o(.text.GPIOPortA_Handler)
+    [Anonymous Symbol]                       0x000003fc   Section        0  lab5main.o(.text.GPIOPortF_Handler)
+    [Anonymous Symbol]                       0x0000045c   Section        0  launchpad.o(.text.LaunchPad_Init)
+    [Anonymous Symbol]                       0x000004ec   Section        0  pll.o(.text.PLL_Init)
+    [Anonymous Symbol]                       0x00000558   Section        0  timer0a.o(.text.Timer0A_Handler)
+    [Anonymous Symbol]                       0x00000574   Section        0  timer0a.o(.text.Timer0A_Init)
+    [Anonymous Symbol]                       0x000005f0   Section        0  timer1a.o(.text.Timer1A_Handler)
+    [Anonymous Symbol]                       0x0000060c   Section        0  timer1a.o(.text.Timer1A_Init)
+    [Anonymous Symbol]                       0x00000680   Section        0  timer2a.o(.text.Timer2A_Handler)
+    [Anonymous Symbol]                       0x0000069c   Section        0  switch.o(.text.cycleTempo)
+    [Anonymous Symbol]                       0x000006c0   Section        0  lab5main.o(.text.main)
+    [Anonymous Symbol]                       0x00000774   Section        0  switch.o(.text.playPause)
+    [Anonymous Symbol]                       0x00000780   Section        0  lab5main.o(.text.portAInit)
+    [Anonymous Symbol]                       0x000007fc   Section        0  switch.o(.text.rewind)
+    [Anonymous Symbol]                       0x0000082c   Section        0  song.o(.text.song_init)
+    [Anonymous Symbol]                       0x0000088c   Section        0  lab5main.o(.text.timer0ATask)
+    [Anonymous Symbol]                       0x00000890   Section        0  lab5main.o(.text.timer1ATask)
+    i.__scatterload_copy                     0x000008da   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x000008e8   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x000008ea   Section       14  handlers.o(i.__scatterload_zeroinit)
+    .L__const.main.durations                 0x000008f8   Data         228  lab5main.o(.rodata..L__const.main.durations)
+    .L__const.main.freqs                     0x000009dc   Data         228  lab5main.o(.rodata..L__const.main.freqs)
+    StackMem                                 0x200002f0   Data           0  startup.o(STACK)
+    STACK                                    0x200002f0   Section     1024  startup.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv4$E$P$D$K$B$S$7EM$VFPi3$EXTD16$VFPS$VFMA$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$~IW$USESV6$~STKCKD$USESV7$~SHL$OTIME$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __Vectors                                0x00000000   Data           0  startup.o(RESET)
+    __cpp_initialize__aeabi_                  - Undefined Weak Reference
+    __cxa_finalize                            - Undefined Weak Reference
+    __decompress                              - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _microlib_exit                            - Undefined Weak Reference
+    Reset_Handler                            0x0000026d   Thumb Code     0  startup.o(RESET)
+    NMI_Handler                              0x00000271   Thumb Code     2  startup.o(RESET)
+    HardFault_Handler                        0x00000273   Thumb Code     2  startup.o(RESET)
+    MemManage_Handler                        0x00000275   Thumb Code     2  startup.o(RESET)
+    BusFault_Handler                         0x00000277   Thumb Code     2  startup.o(RESET)
+    UsageFault_Handler                       0x00000279   Thumb Code     2  startup.o(RESET)
+    SVC_Handler                              0x0000027b   Thumb Code     2  startup.o(RESET)
+    DebugMon_Handler                         0x0000027d   Thumb Code     2  startup.o(RESET)
+    PendSV_Handler                           0x0000027f   Thumb Code     2  startup.o(RESET)
+    SysTick_Handler                          0x00000281   Thumb Code     2  startup.o(RESET)
+    ADC0Seq0_Handler                         0x00000283   Thumb Code     0  startup.o(RESET)
+    ADC0Seq1_Handler                         0x00000283   Thumb Code     0  startup.o(RESET)
+    ADC0Seq2_Handler                         0x00000283   Thumb Code     0  startup.o(RESET)
+    ADC0Seq3_Handler                         0x00000283   Thumb Code     0  startup.o(RESET)
+    ADC1Seq0_Handler                         0x00000283   Thumb Code     0  startup.o(RESET)
+    ADC1Seq1_Handler                         0x00000283   Thumb Code     0  startup.o(RESET)
+    ADC1Seq2_Handler                         0x00000283   Thumb Code     0  startup.o(RESET)
+    ADC1Seq3_Handler                         0x00000283   Thumb Code     0  startup.o(RESET)
+    CAN0_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    CAN1_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    CAN2_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    Comp0_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    Comp1_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    Comp2_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    Ethernet_Handler                         0x00000283   Thumb Code     0  startup.o(RESET)
+    ExtBus_Handler                           0x00000283   Thumb Code     0  startup.o(RESET)
+    FPU_Handler                              0x00000283   Thumb Code     0  startup.o(RESET)
+    Fan0_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    FlashCtl_Handler                         0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortB_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortC_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortD_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortE_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortG_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortH_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortJ_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortK_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortL_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortM_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortN_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortP1_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortP2_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortP3_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortP4_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortP5_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortP6_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortP7_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortP_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortQ1_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortQ2_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortQ3_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortQ4_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortQ5_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortQ6_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortQ7_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortQ_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortR_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortS_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    Hibernate_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    I2C0_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    I2C1_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    I2C2_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    I2C3_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    I2C4_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    I2C5_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    I2S0_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    LPC0_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    PECI0_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    PWM0Fault_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    PWM0Generator0_Handler                   0x00000283   Thumb Code     0  startup.o(RESET)
+    PWM0Generator1_Handler                   0x00000283   Thumb Code     0  startup.o(RESET)
+    PWM0Generator2_Handler                   0x00000283   Thumb Code     0  startup.o(RESET)
+    PWM0Generator3_Handler                   0x00000283   Thumb Code     0  startup.o(RESET)
+    PWM1Fault_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    PWM1Generator0_Handler                   0x00000283   Thumb Code     0  startup.o(RESET)
+    PWM1Generator1_Handler                   0x00000283   Thumb Code     0  startup.o(RESET)
+    PWM1Generator2_Handler                   0x00000283   Thumb Code     0  startup.o(RESET)
+    PWM1Generator3_Handler                   0x00000283   Thumb Code     0  startup.o(RESET)
+    Quadrature0_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    Quadrature1_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    Quadrature2_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    SSI0_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    SSI1_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    SSI2_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    SSI3_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    SysCtl_Handler                           0x00000283   Thumb Code     0  startup.o(RESET)
+    Timer0B_Handler                          0x00000283   Thumb Code     0  startup.o(RESET)
+    Timer1B_Handler                          0x00000283   Thumb Code     0  startup.o(RESET)
+    Timer2B_Handler                          0x00000283   Thumb Code     0  startup.o(RESET)
+    Timer3A_Handler                          0x00000283   Thumb Code     0  startup.o(RESET)
+    Timer3B_Handler                          0x00000283   Thumb Code     0  startup.o(RESET)
+    Timer4A_Handler                          0x00000283   Thumb Code     0  startup.o(RESET)
+    Timer4B_Handler                          0x00000283   Thumb Code     0  startup.o(RESET)
+    Timer5A_Handler                          0x00000283   Thumb Code     0  startup.o(RESET)
+    Timer5B_Handler                          0x00000283   Thumb Code     0  startup.o(RESET)
+    UART0_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    UART1_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    UART2_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    UART3_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    UART4_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    UART5_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    UART6_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    UART7_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    USB0_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    WDT_Handler                              0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer0A_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer0B_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer1A_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer1B_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer2A_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer2B_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer3A_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer3B_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer4A_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer4B_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer5A_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer5B_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    uDMA_Error                               0x00000283   Thumb Code     0  startup.o(RESET)
+    uDMA_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    __main                                   0x00000285   Thumb Code     0  entry.o(.ARM.Collect$$$$00000000)
+    _main_stk                                0x00000285   Thumb Code     0  entry2.o(.ARM.Collect$$$$00000001)
+    _main_scatterload                        0x00000289   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    __main_after_scatterload                 0x0000028d   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    _main_clock                              0x0000028d   Thumb Code     0  entry7b.o(.ARM.Collect$$$$00000008)
+    _main_cpp_init                           0x0000028d   Thumb Code     0  entry8b.o(.ARM.Collect$$$$0000000A)
+    _main_init                               0x0000028d   Thumb Code     0  entry9a.o(.ARM.Collect$$$$0000000B)
+    __rt_final_cpp                           0x00000295   Thumb Code     0  entry10a.o(.ARM.Collect$$$$0000000D)
+    __rt_final_exit                          0x00000295   Thumb Code     0  entry11a.o(.ARM.Collect$$$$0000000F)
+    DisableInterrupts                        0x00000299   Thumb Code     0  startup.o(.text)
+    EnableInterrupts                         0x0000029d   Thumb Code     0  startup.o(.text)
+    StartCritical                            0x000002a1   Thumb Code     0  startup.o(.text)
+    EndCritical                              0x000002a9   Thumb Code     0  startup.o(.text)
+    WaitForInterrupt                         0x000002af   Thumb Code     0  startup.o(.text)
+    __aeabi_memcpy                           0x000002b5   Thumb Code    36  memcpya.o(.text)
+    __aeabi_memcpy4                          0x000002b5   Thumb Code     0  memcpya.o(.text)
+    __aeabi_memcpy8                          0x000002b5   Thumb Code     0  memcpya.o(.text)
+    __scatterload                            0x000002d9   Thumb Code    28  init.o(.text)
+    __scatterload_rt2                        0x000002d9   Thumb Code     0  init.o(.text)
+    DAC_Init                                 0x000002fd   Thumb Code   148  max5353.o(.text.DAC_Init)
+    DAC_Out                                  0x00000391   Thumb Code    18  max5353.o(.text.DAC_Out)
+    GPIOPortA_Handler                        0x000003a5   Thumb Code    88  lab5main.o(.text.GPIOPortA_Handler)
+    GPIOPortF_Handler                        0x000003fd   Thumb Code    96  lab5main.o(.text.GPIOPortF_Handler)
+    LaunchPad_Init                           0x0000045d   Thumb Code   144  launchpad.o(.text.LaunchPad_Init)
+    PLL_Init                                 0x000004ed   Thumb Code   106  pll.o(.text.PLL_Init)
+    Timer0A_Handler                          0x00000559   Thumb Code    26  timer0a.o(.text.Timer0A_Handler)
+    Timer0A_Init                             0x00000575   Thumb Code   122  timer0a.o(.text.Timer0A_Init)
+    Timer1A_Handler                          0x000005f1   Thumb Code    28  timer1a.o(.text.Timer1A_Handler)
+    Timer1A_Init                             0x0000060d   Thumb Code   116  timer1a.o(.text.Timer1A_Init)
+    Timer2A_Handler                          0x00000681   Thumb Code    28  timer2a.o(.text.Timer2A_Handler)
+    cycleTempo                               0x0000069d   Thumb Code    34  switch.o(.text.cycleTempo)
+    main                                     0x000006c1   Thumb Code   178  lab5main.o(.text.main)
+    playPause                                0x00000775   Thumb Code    12  switch.o(.text.playPause)
+    portAInit                                0x00000781   Thumb Code   124  lab5main.o(.text.portAInit)
+    rewind                                   0x000007fd   Thumb Code    48  switch.o(.text.rewind)
+    song_init                                0x0000082d   Thumb Code    94  song.o(.text.song_init)
+    timer0ATask                              0x0000088d   Thumb Code     2  lab5main.o(.text.timer0ATask)
+    timer1ATask                              0x00000891   Thumb Code    74  lab5main.o(.text.timer1ATask)
+    __scatterload_copy                       0x000008db   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x000008e9   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x000008eb   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    Region$$Table$$Base                      0x00000ac0   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x00000ae0   Number         0  anon$$obj.o(Region$$Table)
+    finishedNoteFlag                         0x20000000   Data           1  lab5main.o(.data.finishedNoteFlag)
+    sineTable                                0x20000004   Data         256  lab5main.o(.data.sineTable)
+    tempos                                   0x20000104   Data           3  lab5main.o(.data.tempos)
+    PeriodicTask0                            0x20000108   Data           4  timer0a.o(.bss.PeriodicTask0)
+    PeriodicTask1                            0x2000010c   Data           4  timer1a.o(.bss.PeriodicTask1)
+    PeriodicTask2                            0x20000110   Data           4  timer2a.o(.bss.PeriodicTask2)
+    debounceFlag                             0x20000114   Data           1  lab5main.o(.bss.debounceFlag)
+    pausedFlag                               0x20000115   Data           1  lab5main.o(.bss.pausedFlag)
+    sineIdx                                  0x20000118   Data           4  lab5main.o(.bss.sineIdx)
+    song                                     0x2000011c   Data         468  lab5main.o(.bss.song)
+    __initial_sp                             0x200006f0   Data           0  startup.o(STACK)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x0000026d
+
+  Load Region LR_1 (Base: 0x00000000, Size: 0x00000be8, Max: 0xffffffff, ABSOLUTE)
+
+    Execution Region ER_RO (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x00000ae0, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x00000000   0x00000000   0x00000284   Code   RO            3  * RESET               startup.o
+    0x00000284   0x00000284   0x00000000   Code   RO          159  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x00000284   0x00000284   0x00000004   Code   RO          166    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x00000288   0x00000288   0x00000004   Code   RO          169    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x0000028c   0x0000028c   0x00000000   Code   RO          171    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x0000028c   0x0000028c   0x00000000   Code   RO          173    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x0000028c   0x0000028c   0x00000008   Code   RO          174    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x00000294   0x00000294   0x00000000   Code   RO          176    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x00000294   0x00000294   0x00000000   Code   RO          178    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x00000294   0x00000294   0x00000004   Code   RO          167    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x00000298   0x00000298   0x0000001c   Code   RO            4    .text               startup.o
+    0x000002b4   0x000002b4   0x00000024   Code   RO          162    .text               mc_w.l(memcpya.o)
+    0x000002d8   0x000002d8   0x00000024   Code   RO          180    .text               mc_w.l(init.o)
+    0x000002fc   0x000002fc   0x00000094   Code   RO          112    .text.DAC_Init      max5353.o
+    0x00000390   0x00000390   0x00000012   Code   RO          114    .text.DAC_Out       max5353.o
+    0x000003a2   0x000003a2   0x00000002   PAD
+    0x000003a4   0x000003a4   0x00000058   Code   RO           65    .text.GPIOPortA_Handler  lab5main.o
+    0x000003fc   0x000003fc   0x00000060   Code   RO           63    .text.GPIOPortF_Handler  lab5main.o
+    0x0000045c   0x0000045c   0x00000090   Code   RO           37    .text.LaunchPad_Init  launchpad.o
+    0x000004ec   0x000004ec   0x0000006a   Code   RO           13    .text.PLL_Init      pll.o
+    0x00000556   0x00000556   0x00000002   PAD
+    0x00000558   0x00000558   0x0000001a   Code   RO           24    .text.Timer0A_Handler  timer0a.o
+    0x00000572   0x00000572   0x00000002   PAD
+    0x00000574   0x00000574   0x0000007a   Code   RO           22    .text.Timer0A_Init  timer0a.o
+    0x000005ee   0x000005ee   0x00000002   PAD
+    0x000005f0   0x000005f0   0x0000001c   Code   RO          132    .text.Timer1A_Handler  timer1a.o
+    0x0000060c   0x0000060c   0x00000074   Code   RO          130    .text.Timer1A_Init  timer1a.o
+    0x00000680   0x00000680   0x0000001c   Code   RO          147    .text.Timer2A_Handler  timer2a.o
+    0x0000069c   0x0000069c   0x00000022   Code   RO           92    .text.cycleTempo    switch.o
+    0x000006be   0x000006be   0x00000002   PAD
+    0x000006c0   0x000006c0   0x000000b2   Code   RO           69    .text.main          lab5main.o
+    0x00000772   0x00000772   0x00000002   PAD
+    0x00000774   0x00000774   0x0000000c   Code   RO           90    .text.playPause     switch.o
+    0x00000780   0x00000780   0x0000007c   Code   RO           57    .text.portAInit     lab5main.o
+    0x000007fc   0x000007fc   0x00000030   Code   RO           88    .text.rewind        switch.o
+    0x0000082c   0x0000082c   0x0000005e   Code   RO          102    .text.song_init     song.o
+    0x0000088a   0x0000088a   0x00000002   PAD
+    0x0000088c   0x0000088c   0x00000002   Code   RO           59    .text.timer0ATask   lab5main.o
+    0x0000088e   0x0000088e   0x00000002   PAD
+    0x00000890   0x00000890   0x0000004a   Code   RO           61    .text.timer1ATask   lab5main.o
+    0x000008da   0x000008da   0x0000000e   Code   RO          184    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x000008e8   0x000008e8   0x00000002   Code   RO          185    i.__scatterload_null  mc_w.l(handlers.o)
+    0x000008ea   0x000008ea   0x0000000e   Code   RO          186    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x000008f8   0x000008f8   0x000000e4   Data   RO           79    .rodata..L__const.main.durations  lab5main.o
+    0x000009dc   0x000009dc   0x000000e4   Data   RO           78    .rodata..L__const.main.freqs  lab5main.o
+    0x00000ac0   0x00000ac0   0x00000020   Data   RO          183    Region$$Table       anon$$obj.o
+
+
+    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x00000ae0, Size: 0x00000108, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x00000ae0   0x00000001   Data   RW           74    .data.finishedNoteFlag  lab5main.o
+    0x20000001   0x00000ae1   0x00000003   PAD
+    0x20000004   0x00000ae4   0x00000100   Data   RW           72    .data.sineTable     lab5main.o
+    0x20000104   0x00000be4   0x00000003   Data   RW           71    .data.tempos        lab5main.o
+
+
+    Execution Region ER_ZI (Exec base: 0x20000108, Load base: 0x00000be8, Size: 0x000005e8, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000108        -       0x00000004   Zero   RW           28    .bss.PeriodicTask0  timer0a.o
+    0x2000010c        -       0x00000004   Zero   RW          136    .bss.PeriodicTask1  timer1a.o
+    0x20000110        -       0x00000004   Zero   RW          151    .bss.PeriodicTask2  timer2a.o
+    0x20000114        -       0x00000001   Zero   RW           76    .bss.debounceFlag   lab5main.o
+    0x20000115        -       0x00000001   Zero   RW           75    .bss.pausedFlag     lab5main.o
+    0x20000116   0x00000be8   0x00000002   PAD
+    0x20000118        -       0x00000004   Zero   RW           73    .bss.sineIdx        lab5main.o
+    0x2000011c        -       0x000001d4   Zero   RW           77    .bss.song           lab5main.o
+    0x200002f0        -       0x00000400   Zero   RW            1    STACK               startup.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+       562          0        456        260        474       2029   lab5main.o
+       144          0          0          0          0       1466   launchpad.o
+       166          0          0          0          0       1370   max5353.o
+       106          0          0          0          0        608   pll.o
+        94          0          0          0          0       1342   song.o
+       672        622          0          0       1024       1044   startup.o
+        94          0          0          0          0       1205   switch.o
+       148          0          0          0          4       1081   timer0a.o
+       144          0          0          0          4       1046   timer1a.o
+        28          0          0          0          4       1046   timer2a.o
+
+    ----------------------------------------------------------------------
+      2174        622        488        264       1512      12237   Object Totals
+         0          0         32          0          0          0   (incl. Generated)
+        16          0          0          4          2          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+         0          0          0          0          0          0   entry.o
+         0          0          0          0          0          0   entry10a.o
+         0          0          0          0          0          0   entry11a.o
+         8          4          0          0          0          0   entry2.o
+         4          0          0          0          0          0   entry5.o
+         0          0          0          0          0          0   entry7b.o
+         0          0          0          0          0          0   entry8b.o
+         8          4          0          0          0          0   entry9a.o
+        30          0          0          0          0          0   handlers.o
+        36          8          0          0          0         68   init.o
+        36          0          0          0          0         68   memcpya.o
+
+    ----------------------------------------------------------------------
+       122         16          0          0          0        136   Library Totals
+         0          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+       122         16          0          0          0        136   mc_w.l
+
+    ----------------------------------------------------------------------
+       122         16          0          0          0        136   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+      2296        638        488        264       1512      12417   Grand Totals
+      2296        638        488        264       1512      12417   ELF Image Totals
+      2296        638        488        264          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                 2784 (   2.72kB)
+    Total RW  Size (RW Data + ZI Data)              1776 (   1.73kB)
+    Total ROM Size (Code + RO Data + RW Data)       3048 (   2.98kB)
+
+==============================================================================
+
